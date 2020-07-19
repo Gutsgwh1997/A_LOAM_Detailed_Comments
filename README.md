@@ -3,7 +3,7 @@
 
 A-LOAM is an Advanced implementation of LOAM (J. Zhang and S. Singh. LOAM: Lidar Odometry and Mapping in Real-time), which uses Eigen and Ceres Solver to simplify code structure. This code is modified from LOAM and [LOAM_NOTED](https://github.com/cuitaixiang/LOAM_NOTED). This code is clean and simple without complicated mathematical derivation and redundant operations. It is a good learning material for SLAM beginners.
 
-<img src="https://github.com/HKUST-Aerial-Robotics/A-LOAM/blob/devel/picture/kitti.png" width = 55% height = 55%/>
+<img src="https://github.com/Gutsgwh1997/A_LOAM_Detailed_Comments/blob/master/picture/kitti.png" width = 55% height = 55%/>
 
 **Modifier:** [Tong Qin](http://www.qintonguav.com), [Shaozu Cao](https://github.com/shaozu)
 
@@ -48,7 +48,7 @@ Download [KITTI Odometry dataset](http://www.cvlibs.net/datasets/kitti/eval_odom
     roslaunch aloam_velodyne aloam_velodyne_HDL_64.launch
     roslaunch aloam_velodyne kitti_helper.launch
 ```
-<img src="https://github.com/HKUST-Aerial-Robotics/A-LOAM/blob/devel/picture/kitti_gif.gif" width = 720 height = 351 />
+<img src="https://github.com/Gutsgwh1997/A_LOAM_Detailed_Comments/blob/master/picture/kitti_gif.gif" width = 720 height = 351 />
 
 ## 5. Docker Support
 To further facilitate the building process, we add docker in our code. Docker environment is like a sandbox, thus makes our code environment-independent. To run with docker, first make sure [ros](http://wiki.ros.org/ROS/Installation) and [docker](https://docs.docker.com/install/linux/docker-ce/ubuntu/) are installed on your machine. Then add your account to `docker` group by `sudo usermod -aG docker $YOUR_USER_NAME`. **Relaunch the terminal or logout and re-login if you get `Permission denied` error**, type:
@@ -62,3 +62,6 @@ The build process may take a while depends on your machine. After that, run `./r
 ## 6.Acknowledgements
 Thanks for LOAM(J. Zhang and S. Singh. LOAM: Lidar Odometry and Mapping in Real-time) and [LOAM_NOTED](https://github.com/cuitaixiang/LOAM_NOTED).
 
+
+## 7.附加
+本人使用的ceres版本比较低，没有`ceres::EigenQuaternionParameterization()`参数化类，故自己实现了一份。
