@@ -1,0 +1,11 @@
+<launch>
+    <node name="kittiHelper" pkg="aloam_velodyne" type="kittiHelper" output="screen"> 
+        <param name="dataset_folder" type="string" value="/media/gwh/学习资料/研究生课题/数据集/KITTI/raw_data/odometry/" />
+        <param name="sequence_number" type="string" value="00" />
+        <param name="to_bag" type="bool" value="false" />
+        <!-- replace with your output folder -->
+        <param name="output_bag_file" type="string" value="/media/gwh/学习资料/研究生课题/数据集/KITTI/raw_data/odometry/kitti.bag" />
+        <!-- 控制消息的发布频率, 10 / publish_delay -->
+        <param name="publish_delay" type="int" value="1" />
+    </node>
+</launch>
